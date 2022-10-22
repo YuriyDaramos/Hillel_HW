@@ -1,35 +1,40 @@
-AVAIL_MATH_OPER = ["+", "-", "*", "/"]    # Доступные математические операторы
+AVAILABLE_MATH_OPERATORS = ["+", "-", "*", "/"]    # Доступные математические операторы
 
-n1 = None               # Число №1
-n2 = None               # Число №2
-math_oper = None        # Математический оператор
+# Наглядная демонстрация возникающих сложностей со вложенными циклами
+while True:         # Главный цикл
 
-while True:
-    print("Введите первое число")
-    n1 = input()
-    print("Введите второе число")
-    n2 = input()
+    print("Введите первое число:")
     try:
-        n1 = float(n1)
-        n2 = float(n2)
+        num_1 = float(input())
     except ValueError:
         print("Ошибка ввода, попробуйте снова")
         continue
-    print("Введите математическй оператор из списка: +, -, *, /")
-    math_oper = input()
-    if math_oper not in AVAIL_MATH_OPER:
-        print("Введен недопустимый оператор")
-        continue
-    else:
-        if math_oper == "+":
-            print("Результат операции: ", n1 + n2)
-        elif math_oper == "-":
-            print("Результат операции: ", n1 - n2)
-        elif math_oper == "*":
-            print("Результат операции: ", n1 * n2)
-        elif math_oper == "/":
+
+    while True:     # Ввод второго числа, повтор цикла при ошибке
+        print("Введите второе число:")
+        try:
+            num_2 = float(input())
+        except ValueError:
+            print("Ошибка ввода, попробуйте снова")
+            continue
+        break
+
+    while True:     # Перебор математических операторов
+        print("Введите математический оператор из списка: +, -, *, /")
+        math_operator = input()
+        if math_operator not in AVAILABLE_MATH_OPERATORS:
+            print("Введен недопустимый оператор")
+            continue
+        elif math_operator == "+":
+            print(f"Результат операции {num_1} {math_operator} {num_2} = {num_1 + num_2}")
+        elif math_operator == "-":
+            print(f"Результат операции {num_1} {math_operator} {num_2} = {num_1 - num_2}")
+        elif math_operator == "*":
+            print(f"Результат операции {num_1} {math_operator} {num_2} = {num_1 * num_2}")
+        elif math_operator == "/":
             try:
-                print("Результат операции: ", n1 / n2)
+                print(f"Результат операции {num_1} {math_operator} {num_2} = {num_1 / num_2}")
             except ZeroDivisionError:
                 print("Ошибка деления на ноль")
-        break
+            break
+    break

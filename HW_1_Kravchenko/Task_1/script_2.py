@@ -1,2 +1,1 @@
-string = "This is apple"
-print(string.upper())
+print(str.upper("This is apple"))

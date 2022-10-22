@@ -1,7 +1,9 @@
 def min_finder(*numbers):
     """Поиск наименьшего значения среди принятых аргументов"""
     min = numbers[0]
-    [min = i for i in numbers: if i < min]
+    for i in numbers:
+        if i < min:
+            min = i
     return min
 
 
