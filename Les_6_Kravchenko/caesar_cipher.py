@@ -10,9 +10,10 @@ def encode_caesar(text, key):
 
     ord_list = []
     char_list = []
-    [ord_list.append(ord(char)) for char in text]
-    new_ord_list = [ordn + key for ordn in ord_list]
-    [char_list.append(chr(ordn)) for ordn in new_ord_list]
+
+    [ord_list.append(ord(char)) for char in text]   # Перевод символов в коды Юникода
+    new_ord_list = [ordn + key for ordn in ord_list]    # Шифрование кодов
+    [char_list.append(chr(ordn)) for ordn in new_ord_list]  # Перевод кодов в символы Юникода
     return "".join(char_list)
 
 
@@ -28,9 +29,9 @@ def decode_caesar(text, key):
 
     ord_list = []
     char_list = []
-    [ord_list.append(ord(char)) for char in text]
-    new_ord_list = [ordn - key for ordn in ord_list]
-    [char_list.append(chr(ordn)) for ordn in new_ord_list]
+    [ord_list.append(ord(char)) for char in text]   # Перевод символов в коды Юникода
+    new_ord_list = [ordn - key for ordn in ord_list]    # Дешифровкае кодов
+    [char_list.append(chr(ordn)) for ordn in new_ord_list]  # Перевод кодов в символы Юникода
     return "".join(char_list)
 
 
@@ -55,3 +56,6 @@ def test_encode_dectode():      # Temp func only for testing
 
     t1_wrong_key_decode = decode_caesar(t1_encode, key1 + 1)
     print(f"DECODED TEXT (WRONG KEY = {key1 + 1}):\n", t1_wrong_key_decode, sep)
+
+
+test_encode_dectode()
