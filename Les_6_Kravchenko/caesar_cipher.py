@@ -34,24 +34,24 @@ def decode_caesar(text, key):
     return "".join(char_list)
 
 
-#====================TESTING_TEMP_AREA====================
-import random
+def test_encode_dectode():      # Temp func only for testing
+    import random
 
-t1 = "Шифр Цезаря, также известный как шифр сдвига, код Цезаря — один из самых простых и наиболее широко известных " \
-     "методов шифрования. Шифр Цезаря — это вид шифра подстановки, в котором каждый символ в открытом тексте " \
-     "заменяется символом, находящимся на некотором постоянном числе позиций левее или правее него в алфавите. " \
-     "Например, в шифре со сдвигом вправо на 3, А была бы заменена на Г, Б станет Д, и так далее. "
+    t1 = "Шифр Цезаря, также известный как шифр сдвига, код Цезаря — один из самых простых и наиболее широко известных " \
+         "методов шифрования. Шифр Цезаря — это вид шифра подстановки, в котором каждый символ в открытом тексте " \
+         "заменяется символом, находящимся на некотором постоянном числе позиций левее или правее него в алфавите. " \
+         "Например, в шифре со сдвигом вправо на 3, А была бы заменена на Г, Б станет Д, и так далее. "
 
-key1 = random.randint(1, 10)
-sep = ("\n"+"-"*50)
+    key1 = random.randint(1, 10)
+    sep = ("\n" + "-" * 50)
 
-print("ORIGINAL TEXT:\n", t1, sep)
+    print("ORIGINAL TEXT:\n", t1, sep)
 
-t1_encode = encode_caesar(t1, key1)
-print(f"ENCODED TEXT (KEY = {key1}):\n", t1_encode, sep)
+    t1_encode = encode_caesar(t1, key1)
+    print(f"ENCODED TEXT (KEY = {key1}):\n", t1_encode, sep)
 
-t1_decode = decode_caesar(t1_encode, key1)
-print(f"DECODED TEXT (KEY = {key1}):\n", t1_decode, sep)
+    t1_decode = decode_caesar(t1_encode, key1)
+    print(f"DECODED TEXT (KEY = {key1}):\n", t1_decode, sep)
 
-t1_wrong_key_decode = decode_caesar(t1_encode, key1 + 1)
-print(f"DECODED TEXT (WRONG KEY = {key1 + 1}):\n", t1_wrong_key_decode, sep)
+    t1_wrong_key_decode = decode_caesar(t1_encode, key1 + 1)
+    print(f"DECODED TEXT (WRONG KEY = {key1 + 1}):\n", t1_wrong_key_decode, sep)
