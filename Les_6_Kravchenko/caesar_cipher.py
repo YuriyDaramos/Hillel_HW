@@ -1,12 +1,14 @@
 def encode_caesar(text, key):
-    """Шифрует текст по методу Цезаря
+    """
+    Шифрует текст по методу Цезаря
 
     :param text: Текс для шифрования
     :type text: str
     :param key: Ключ для шифра (значение сдвига)
     :type key: int
     :return: Зашифрованный текст
-    :rtype: str"""
+    :rtype: str
+    """
 
     ord_list = []
     char_list = []
@@ -18,14 +20,16 @@ def encode_caesar(text, key):
 
 
 def decode_caesar(text, key):
-    """Дешифрует текст по методу Цезаря
+    """
+    Дешифрует текст по методу Цезаря
 
     :param text: Текс для дешифровки
     :type text: str
     :param key: Ключ для шифра (значение сдвига)
     :type key: int
     :return: Расшифрованный текст
-    :rtype: str"""
+    :rtype: str
+    """
 
     ord_list = []
     char_list = []
