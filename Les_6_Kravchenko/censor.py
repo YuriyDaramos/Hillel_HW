@@ -1,12 +1,3 @@
-badword_text = "You motherfucker, come on, you little ass... fuck with me, eh?! You fucking little asshole, " \
-               "dickhead, cocksucker... You fuckin’ — come on, come fuck with me! I’ll get your ass, you jerk! Oh, " \
-               "you fuckhead, motherfucker! Fuck all you and your family! Come on, you cocksucker, slime bucket, " \
-               "shitface, turdball! Come on, you scum sucker, you fucking with me?! Come on, you asshole! "
-
-badword_blacklist = ["Motherfucker", "ass", "fuck", "fucking", "asshole", "dickhead", "cocksucker", "fuckin", "jerk",
-                     "fuckhead", "shitface", "turdball", "Sucker"]
-
-
 def censor_text(text, blacklist):
     """
     Цензурирует слова в тексте заменяя их на *, но оставляет первый символ чтобы все могли догадаться
@@ -39,10 +30,3 @@ def censor_text(text, blacklist):
             word_list[index] = word[0] + ("*" * (len(word_stripped) - 1)) + (word[-1] * (spm * -1))
         index += 1
     return " ".join(word_list)
-
-
-print("---------------------------------")
-print(badword_text)
-print("---------------------------------")
-print(censor_text(badword_text, badword_blacklist))
-print("---------------------------------")
