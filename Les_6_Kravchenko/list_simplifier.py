@@ -24,13 +24,3 @@ def simplify_list(list_set_tuple, list_1d=None):
         else:
             list_1d.append(element)
     return list_1d
-
-
-list_task = ["one", [2, "three", 4], 5, True, [6, ["seven", 8, 9], None, ["ten", 11, [12, 13, 14]], 15], 16,
-             ("tuple-start", 17, 18, "tuple-end"), {"set-start", 19, "20", "set-end"},
-             [21, (22, {23, "24"}, type, 24 + 1)]]
-
-print(list_task)
-print("---------------------------------")
-print(simplify_list(list_task))
-print("---------------------------------")
