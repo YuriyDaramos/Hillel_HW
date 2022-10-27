@@ -2,7 +2,7 @@ import unittest
 from Les_6_Kravchenko.list_simplifier import simplify_list
 
 
-class TestCensor(unittest.TestCase):
+class TestSimplifier(unittest.TestCase):
 
     def test_list_in_list(self):
         self.assertEqual(simplify_list([1, [2, 3], 4]), [1, 2, 3, 4])
