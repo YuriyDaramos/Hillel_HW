@@ -11,6 +11,8 @@ def censor_text(text, blacklist):
     :rtype: str
     """
 
+    import string
+
     word_list = text.split(" ")     # Список слов в тексте
     index = 0  # Счётчик слов, нужен для итерации слов
 
@@ -18,7 +20,7 @@ def censor_text(text, blacklist):
 
     # Поиск и обработка "плохих" слов
     for word in word_list:
-        word_stripped = word.rstrip(",.!?'’")
+        word_stripped = word.rstrip(string.punctuation)
         if word_stripped.lower() in lower_blacklist:
             if len(word_stripped) != len(word):
                 # spm -- кол-во потерянных знаков препинания после "раздевания" слова
