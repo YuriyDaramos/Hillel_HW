@@ -39,7 +39,7 @@ def decode_caesar(text, key):
     return "".join(char_list)
 
 
-def test_encode_dectode():      # Temp func only for testing
+def test_encode_decode():      # Temp func only for testing
     import random
 
     t1 = "Шифр Цезаря, также известный как шифр сдвига, код Цезаря — один из самых простых и наиболее широко известных " \
@@ -62,4 +62,4 @@ def test_encode_dectode():      # Temp func only for testing
     print(f"DECODED TEXT (WRONG KEY = {key1 + 1}):\n", t1_wrong_key_decode, sep)
 
 
-test_encode_dectode()
+test_encode_decode()
