@@ -1,5 +1,5 @@
 import unittest
-from censor import censor_text
+from Les_6_Kravchenko.censor import censor_text
 
 
 class TestCensor(unittest.TestCase):
