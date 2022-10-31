@@ -2,7 +2,7 @@ def encode_caesar(text, key):
     """
     Шифрует текст по методу Цезаря
 
-    :param text: Текс для шифрования
+    :param text: Текст для шифрования
     :type text: str
     :param key: Ключ для шифра (значение сдвига)
     :type key: int
@@ -23,7 +23,7 @@ def decode_caesar(text, key):
     """
     Дешифрует текст по методу Цезаря
 
-    :param text: Текс для дешифровки
+    :param text: Текст для дешифровки
     :type text: str
     :param key: Ключ для шифра (значение сдвига)
     :type key: int
