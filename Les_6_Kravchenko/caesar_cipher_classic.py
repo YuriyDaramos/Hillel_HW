@@ -1,4 +1,4 @@
-def cipher_caesar(text, key, decode=False):
+def cipher_classic_caesar(text, key, decode=False):
     """
     Шифрует и дешифрует посимвольно текст по методу Цезаря
 
